@@ -1,0 +1,5 @@
+from urllib.request import urlopen
+keyword = "komputer"
+html = urlopen("https://www.bhinneka.com/jual?cari="+keyword).read()
+print(type(html))
+print(html[1:1000])
