@@ -3,3 +3,8 @@ keyword = "komputer"
 html = urlopen("https://www.bhinneka.com/jual?cari="+keyword).read()
 print(type(html))
 print(html[1:1000])
+
+from bs4 import BeautifulSoup
+soup = BeautifulSoup(html,"lxml")
+print(type(soup))
+print(soup.prettify()[1:1000])
